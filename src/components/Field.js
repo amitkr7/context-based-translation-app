@@ -5,7 +5,7 @@ class Field extends React.Component {
   static contextType = LanguageContext;
   render() {
     let text = 'Name';
-    switch (this.context) {
+    switch (this.context.language) {
       case 'english':
         text = 'Name';
         break;
@@ -16,7 +16,7 @@ class Field extends React.Component {
         text = 'Naam';
         break;
       default:
-        text = 'Submit';
+        text = 'Name';
     }
     return (
       <div className='ui field'>
